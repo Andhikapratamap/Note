@@ -1,7 +1,7 @@
 displayNotes();
 var addBtn = document.getElementById('addBtn');
 
-// below event listener will add user input into the local storage
+// bawa ke local storage
 addBtn.addEventListener('click',function(){
 	
 	let notesObj;
@@ -15,12 +15,12 @@ addBtn.addEventListener('click',function(){
 		notesObj = JSON.parse(notesString);
 	}
 	
-	//Add date
+	//menampilkan waktu
 	let now = new Date();
 	let dateTime = `${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()} | ${now.getHours()}:${now.getMinutes()}`;
 	
 	
-	//pushing into local storage
+	//bawa ke local storage
 	let tempObj = { text: addNote.value, time: dateTime };
 	
 	notesObj.push(tempObj);
@@ -32,7 +32,7 @@ addBtn.addEventListener('click',function(){
 });
 
 
-// funtion to display data stored in the local storage
+// fungsi menampilkan data stored di local storage
 function displayNotes(){
 	let notesObj;
 	let notesString = localStorage.getItem('notes');
@@ -70,7 +70,7 @@ function displayNotes(){
 }
 
 
-//function to delete a note
+//fungsi menghapus kenangan 
 function deleteNote(index){
 	let notesObj;
 	let notesString = localStorage.getItem('notes');
