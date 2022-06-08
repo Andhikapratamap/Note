@@ -3,6 +3,32 @@ simple note with javascript
 > Live preview aplikasi 👇
 <a href="https://main-tiamardiana-admin.vercel.app/">tiamardiana-admin.vercel.app</a>
 
+# Bagaimana cara kerjanya🐱
+
+fungsi menyimpan data 
+
+```javascript
+
+// fungsi menampilkan data stored di local storage
+function displayNotes(){
+	let notesObj;
+	let notesString = localStorage.getItem('notes');
+	
+	if(notesString == null){
+		notesObj = [];
+	}
+	else{
+		notesObj = JSON.parse(notesString);
+	}
+	
+	let html = '';
+	
+	notesObj.forEach(function(element,index){
+		html += `
+
+```
+
+
 <hr>
 
 # Use🐥
